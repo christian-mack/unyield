@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 4200",
     "build": "next build",
     "start": "next start"
   },
@@ -9,6 +9,7 @@
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "latest",
     "autoprefixer": "10.4.17",
+    "contentful": "^10.12.7",
     "geist": "^1.2.1",
     "next": "latest",
     "postcss": "8.4.33",
@@ -21,6 +22,7 @@
     "@types/node": "20.11.5",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
+    "cf-content-types-generator": "^2.15.3",
     "encoding": "^0.1.13"
   }
 }

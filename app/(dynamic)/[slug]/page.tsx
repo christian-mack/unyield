@@ -6,7 +6,7 @@ import {
 
 const client = createContentfulClient();
 
-export async function getStaticParams() {
+export async function generateStaticParams() {
   const pages = await getPages();
 
   return {

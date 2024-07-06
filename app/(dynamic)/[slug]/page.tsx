@@ -6,16 +6,17 @@ import {
 
 const client = createContentfulClient();
 
-export async function generateStaticParams() {
-  const pages = await getPages();
+// TODO: handle static params generation
+// export async function generateStaticParams() {
+//   const pages = await getPages();
 
-  return {
-    paths: pages.map((page) => ({
-      params: { slug: page.slug },
-    })),
-    fallback: false,
-  };
-}
+//   return {
+//     paths: pages.map((page) => ({
+//       params: { slug: page.slug },
+//     })),
+//     fallback: false,
+//   };
+// }
 
 export default async function DynamicPage({
   params: { slug },

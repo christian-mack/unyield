@@ -8,7 +8,6 @@ export default async function Index() {
     if (!blocks) return <></>;
 
     blocks.map((block: any) => {
-      console.log(block.sys.contentType.sys.id);
       switch (block.sys.contentType.sys.id) {
         case "header":
           return <Header />;

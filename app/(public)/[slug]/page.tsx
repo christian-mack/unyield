@@ -20,6 +20,9 @@ export default async function DynamicPage({
   params: { slug: string };
 }) {
   const page = await getEntryBySlug(slug, "page");
+  if (!page || !page.fields) {
+    return;
+  }
   const { title, blocks } = page.fields;
 
   return <div>{JSON.stringify(title)}</div>;

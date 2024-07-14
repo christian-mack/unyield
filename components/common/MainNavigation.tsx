@@ -1,9 +1,18 @@
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import { GoArrowUpRight } from "react-icons/go";
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FaLinkedinIn } from "react-icons/fa";
+import { GoArrowUpRight } from "react-icons/go";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export function MainNavigation() {
+  const pathname = usePathname();
+
+  const isActivePage = (page: string) => {
+    return pathname === page;
+  };
+
   return (
     <nav className="w-full flex justify-center bg-brand-yellow px-20 absolute top-0 left-0">
       <div className="flex w-full justify-between items-center py-[30px] border-b border-black">
@@ -14,16 +23,63 @@ export function MainNavigation() {
             <li>
               <Link href="/" className="flex items-center gap-2">
                 <p>Home</p>
-                <span className="font-3xl">
-                  <GoArrowUpRight size={20} />
-                </span>
+                {isActivePage("/") && (
+                  <span className="font-3xl">
+                    <GoArrowUpRight size={20} />
+                  </span>
+                )}
               </Link>
             </li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Blog</li>
-            <li>Contact</li>
+            <li>
+              <Link href="/about-us" className="flex items-center gap-2">
+                <p>About Us</p>
+                {isActivePage("/about-us") && (
+                  <span className="font-3xl">
+                    <GoArrowUpRight size={20} />
+                  </span>
+                )}
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="flex items-center gap-2">
+                <p>Services</p>
+                {isActivePage("/services") && (
+                  <span className="font-3xl">
+                    <GoArrowUpRight size={20} />
+                  </span>
+                )}
+              </Link>
+            </li>
+            <li>
+              <Link href="/portfolio" className="flex items-center gap-2">
+                <p>Portfolio</p>
+                {isActivePage("/portfolio") && (
+                  <span className="font-3xl">
+                    <GoArrowUpRight size={20} />
+                  </span>
+                )}
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="flex items-center gap-2">
+                <p>Blog</p>
+                {isActivePage("/blog") && (
+                  <span className="font-3xl">
+                    <GoArrowUpRight size={20} />
+                  </span>
+                )}
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="flex items-center gap-2">
+                <p>Contact</p>
+                {isActivePage("/contact") && (
+                  <span className="font-3xl">
+                    <GoArrowUpRight size={20} />
+                  </span>
+                )}
+              </Link>
+            </li>
           </ul>
         </div>
         <div>

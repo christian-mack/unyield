@@ -4,9 +4,9 @@ import { GoArrowUpRight } from "react-icons/go";
 
 export default function Header() {
   return (
-    <div className="bg-brand-yellow flex min-h-screen justify-center">
+    <section className="bg-brand-yellow flex min-h-screen justify-center">
       <div className="grid grid-cols-12 w-full px-20">
-        <div className="col-span-6 h-full flex flex-col justify-between">
+        <div className="col-span-4 h-full flex flex-col justify-between">
           <div className="h-full flex items-end">
             <RotatingWords />
           </div>
@@ -19,12 +19,12 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        <div className="col-span-6 flex items-center">
+        <div className="col-span-8 flex items-center">
           <p className="text-[209px] uppercase leading-none break-all">
             Design & Development
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

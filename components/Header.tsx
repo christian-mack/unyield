@@ -2,7 +2,7 @@ import Link from "next/link";
 import { RotatingWords } from "./common/RotatingWords";
 import { GoArrowUpRight } from "react-icons/go";
 
-export default function Header() {
+export function Header() {
   return (
     <section className="bg-brand-yellow flex min-h-screen justify-center">
       <div className="grid grid-cols-12 w-full px-20">

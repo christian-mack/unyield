@@ -12,7 +12,7 @@ export function Footer() {
               src="/assets/logo-vertical.png"
               alt="footer logo"
               fill
-              objectFit="cover"
+              className="object-cover"
             />
           </div>
         </div>
@@ -21,7 +21,7 @@ export function Footer() {
         <div className="col-span-1 col-start-3 flex flex-col">
           <div className="flex flex-col items-center mb-4">
             <div className="mt-4 text-[28px] reverse transform rotate-180 origin-left">
-              <p>+3 (425) 521 60 21</p>
+              <p>+1 (307) 439 4923</p>
             </div>
           </div>
         </div>

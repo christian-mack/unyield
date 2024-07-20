@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { FaLinkedinIn } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { cn } from "@/lib/utils";
 
 export function MainNavigation() {
   const pathname = usePathname();
@@ -13,8 +14,17 @@ export function MainNavigation() {
     return pathname === page;
   };
 
+  const isHomePage = () => {
+    return pathname === "/";
+  };
+
   return (
-    <nav className="w-full flex justify-center bg-brand-yellow px-20 absolute top-0 left-0">
+    <nav
+      className={cn(
+        "hidden w-full md:flex justify-center px-20 absolute top-0 left-0",
+        isHomePage() ? "bg-brand-yellow" : "bg-white"
+      )}
+    >
       <div className="flex w-full justify-between items-center py-[30px] border-b border-black">
         <p className="font-semibold italic uppercase text-xl">Unyield</p>
 

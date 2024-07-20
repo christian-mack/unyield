@@ -105,7 +105,7 @@ export function Footer() {
           </form>
         </div>
         <div className="col-start-3 col-span-10 mt-8 border-t border-black pt-4 flex justify-between text-sm">
-          <p>© Centrix 2021. All Rights Reserved</p>
+          <p>© Unyield 2024. All Rights Reserved</p>
           <a href="/privacy-policy" className="hover:underline">
             Privacy Policy
           </a>
